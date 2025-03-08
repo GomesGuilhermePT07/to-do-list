@@ -1,0 +1,3 @@
+function newTask(){
+    alert('teste');
+}
