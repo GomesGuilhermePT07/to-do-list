@@ -16,6 +16,16 @@ function newTask(){
         values.push({
             name: input.value
         });
-        localStorage.setItem(localStorageName,values);
+        localStorage.setItem(localStorageName,JSON.stringify(values));
+    }
+}
+
+function showValues(){
+    let values = JSON.parse(localStorage.getItem(localStorageName) || "[]");
+    let list = document.getElementById('to-do-list');
+    list.innerHTML = '';
+
+    for(let i=0; i<values.length; i++){
+        list.innerHTML= `<li>${values[i]['name']}</li>`
     }
 }
