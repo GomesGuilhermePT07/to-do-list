@@ -68,8 +68,36 @@ body{
 
 #to-do-list li{
     list-style-type: none;
-    font: 1.4rem;
+    font-size: 1.4rem;
     text-transform: capitalize;
     display: flex;
+    align-items: center;
     justify-content: space-between;
+}
+
+#to-do-list li:hover{
+    background-color: var(--color-dark3);
+    transition: .4s;
+    border-radius: 1rem;
+    padding-left: 1rem;
+}
+
+#btn-ok{
+    border: none;
+    background-color: var(--color-green);
+    color: var(--color-white);
+    font-size: 1rem;
+    padding: .4rem .8rem;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .4s;
+}
+
+#btn-ok:hover{
+    background-color: var(--color-green2);
 }
